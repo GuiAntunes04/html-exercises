@@ -1,0 +1,43 @@
+body {
+    margin: 0;
+    background: #dcdcdc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial;
+}
+
+main {
+    max-width: 300px;
+    background: white;
+    padding: 20px;
+    border: 1px solid #bbb;
+    border-radius: 10px;
+    box-shadow: 0 0 10px black;
+    color: #555;
+}
+
+input, button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    box-sizing: border-box;
+    border: 1px solid #aaa;
+    border-radius: 6px;
+}
+
+input:focus {
+    outline: none;
+    box-shadow: 0 0 6px rgba(100,100,100,0.5);
+}
+
+button {
+    background: #444;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #333;
+}
