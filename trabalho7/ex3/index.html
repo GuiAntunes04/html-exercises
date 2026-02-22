@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo de Peso Ideal - UFU</title>
+</head>
+<body>
+
+<div>
+    <h2>Calculadora de Peso Ideal</h2>
+    
+    <label for="altura">Sua altura (em cm):</label>
+    <input type="number" id="altura" placeholder="Ex: 175">
+
+    <div>
+        <label>Sexo:</label><br>
+        <input type="radio" name="sexo" value="M" checked> Masculino
+        <input type="radio" name="sexo" value="F"> Feminino
+    </div>
+
+    <br>
+    <button type="button" id="btnCalcular">Calcular Peso Ideal</button>
+
+    <p id="resultado"></p>
+</div>
+
+<div>
+    <h2>Debug</h2>
+    <h2>1º</h2>
+    <img src="images/debug.png" alt="">
+    <h2>2º</h2>
+    <img src="images/debug1.png" alt="">
+    <h2>3º</h2>
+    <img src="images/debug2.png" alt="">
+    <h2>4º</h2>
+    <img src="images/debug3.png" alt="">
+
+</div>
+
+<script>
+    const botao = document.querySelector("#btnCalcular");
+
+    botao.onclick = function() {
+        const campoAltura = document.querySelector("#altura");
+        const altura = parseInt(campoAltura.value);
+
+        const radios = document.querySelectorAll('input[name="sexo"]:checked');
+        const sexo = radios[0].value; 
+
+        let pesoIdeal = 0;
+
+        if (sexo === 'M') {
+            pesoIdeal = 52 + (0.75 * (altura - 152.4));
+        } else {
+            pesoIdeal = 52 + (0.67 * (altura - 152.4));
+        }
+
+        const parSaida = document.querySelector("#resultado");
+        parSaida.textContent = `O seu peso ideal calculado é: ${pesoIdeal.toFixed(2)} kg.`;
+    };
+</script>
+
+</body>
+</html>

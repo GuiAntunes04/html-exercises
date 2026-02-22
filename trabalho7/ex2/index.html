@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="ex2.css">
+</head>
+<body>
+    <input type="text" name="nome">
+    <button type="button">Digite seu nome e clique aqui</button>
+    <h2></h2>
+
+    <script>
+        const botao = document.querySelector("button");
+        botao.onclick = function(){
+            const campoNome = document.querySelector("input");
+            const parSaida = document.querySelector("h2");
+            parSaida.textContent = 'Obrigado, ' + campoNome.value;
+        };
+    </script>
+
+<main>
+    <div class="ex2">
+
+    <img src = "images/debug_html.png" alt="">
+    <img src = "images/debug_html1.png" alt="">
+    <img src = "images/debug_html2.png" alt="">
+    <img src = "images/debug_html3.png" alt="">
+
+    </div>
+</main>
+
+</body>
+</html>

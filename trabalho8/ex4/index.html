@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro de Usuário</title>
+    <link rel="stylesheet" href="ex4.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>Cadastro de Usuário</h2>
+
+        <!-- Formulário -->
+        <form id="formCadastro">
+
+            <label>Usuário:</label>
+            <input type="text" id="usuario">
+            <p id="erroUsuario" class="erro"></p>
+
+            <label>Senha:</label>
+            <input type="password" id="senha">
+            <p id="erroSenha" class="erro"></p>
+
+            <label>Email:</label>
+            <input type="email" id="email">
+            <p id="erroEmail" class="erro"></p>
+
+            <button type="submit">Cadastrar</button>
+
+        </form>
+    </div>
+
+    <script>
+        // Seleciona o formulário
+        const formulario = document.getElementById("formCadastro");
+
+        // Adiciona evento de envio
+        formulario.addEventListener("submit", function(event) {
+
+            // Impede o envio automático do formulário
+            event.preventDefault();
+
+            // Seleciona os campos
+            const usuario = document.getElementById("usuario");
+            const senha = document.getElementById("senha");
+            const email = document.getElementById("email");
+
+            // Seleciona os parágrafos de erro
+            const erroUsuario = document.getElementById("erroUsuario");
+            const erroSenha = document.getElementById("erroSenha");
+            const erroEmail = document.getElementById("erroEmail");
+
+            // Limpa mensagens anteriores
+            erroUsuario.textContent = "";
+            erroSenha.textContent = "";
+            erroEmail.textContent = "";
+
+            // Variável de controle para verificar se pode enviar
+            let formularioValido = true;
+
+            // Validação do usuário
+            if (usuario.value === "") {
+                erroUsuario.textContent = "O usuário deve ser preenchido";
+                formularioValido = false;
+            }
+
+            // Validação da senha
+            if (senha.value === "") {
+                erroSenha.textContent = "A senha deve ser preenchida";
+                formularioValido = false;
+            }
+
+            // Validação do email
+            if (email.value === "") {
+                erroEmail.textContent = "O email deve ser preenchido";
+                formularioValido = false;
+            }
+
+            // Se todos os campos estiverem preenchidos
+            if (formularioValido) {
+                alert("Cadastro realizado com sucesso!");
+                formulario.submit(); // Envia o formulário
+            }
+
+        });
+    </script>
+
+</body>
+</html>

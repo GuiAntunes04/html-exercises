@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interesse</title>
+    <link rel="stylesheet" href="./ex1.css">
+</head>
+<body>
+    <div>
+        <label for="campo-interesse">Interesse:</label>
+    <!-- Texto que identifica o campo de entrada.
+         O atributo "for" conecta com o id do input -->
+
+    <input type="text" id="campo-interesse" name="interesse">
+    <!-- Campo onde o usuário digita o interesse -->
+
+    <button> Adicionar</button>
+    <!-- Botão que será clicado para adicionar o interesse na lista -->
+
+    <ol>
+    </ol>
+    <!-- Lista ordenada (numerada) que receberá os interesses -->
+
+    <script>
+        // Seleciona o primeiro botão encontrado na página
+        const botaoAdicionar = document.querySelector("button");
+
+        // Adiciona um evento de clique ao botão
+        botaoAdicionar.addEventListener("click", function() {
+
+            // Seleciona o primeiro input da página
+            const campoInteresse = document.querySelector("input");
+
+            // Seleciona a lista ordenada <ol>
+            const listaInteresses = document.querySelector("ol");
+
+            // Cria um novo elemento <li> (item da lista)
+            const novoLi = document.createElement("li");
+
+            // Define o texto do novo <li> como o valor digitado no input
+            novoLi.textContent = campoInteresse.value;
+
+            // Adiciona o novo <li> dentro da lista <ol>
+            listaInteresses.appendChild(novoLi);
+
+            // Limpa o campo de texto após adicionar o item
+            campoInteresse.value = '';
+        })
+    </script>
+    </div>
+</body>
+</html>

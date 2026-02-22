@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Selecionar Estado</title>
+    <link rel="stylesheet" href="ex2.css">
+</head>
+<body>
+
+    <div class="caixa">
+        <h1>Selecione uma opção:</h1>
+
+        <label for="estado">Estado:</label>
+        <select id="estado">
+            <option value="">-- Escolha --</option>
+            <option value="SP">São Paulo</option>
+            <option value="MG">Minas Gerais</option>
+            <option value="RJ">Rio de Janeiro</option>
+            <option value="ES">Espírito Santo</option>
+        </select>
+
+        <p id="resultado">Você selecionou: </p>
+    </div>
+
+    <script>
+        // Seleciona o elemento select
+        const selectEstado = document.getElementById("estado");
+
+        // Seleciona o parágrafo onde o resultado será exibido
+        const paragrafo = document.getElementById("resultado");
+
+        // Adiciona o evento "change" ao select
+        selectEstado.addEventListener("change", function() {
+
+            // Pega o valor selecionado (value da option)
+            const estadoSelecionado = selectEstado.value;
+
+            // Atualiza o texto do parágrafo
+            paragrafo.textContent = "Você selecionou: " + estadoSelecionado;
+        });
+    </script>
+
+</body>
+</html>

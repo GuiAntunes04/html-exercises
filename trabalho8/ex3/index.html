@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Galeria - Clínica ABC Health</title>
+    <link rel="stylesheet" href="galeria.css">
+</head>
+<body>
+
+<header>
+    <h1>Clínica ABC Health</h1>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="galeria.html">Galeria</a>
+    <a href="login.html">Login</a>
+</nav>
+
+<main>
+    <h2>Nossa Estrutura</h2>
+
+    <div class="galeria">
+        <img src="images/Clínica.jpg" alt="">
+        <img src="images/Clínica1.jpg" alt="">
+        <img src="images/Clínica2.jpg" alt="">
+        <img src="images/Clínica3.jpg" alt="">
+        <img src="images/Clínica4.jpg" alt="">
+        <img src="images/Clínica5.jpg" alt="">
+        <img src="images/Clínica6.jpg" alt="">
+        <img src="images/Clínica7.jpg" alt="">
+    </div>
+</main>
+
+<footer>
+    <address>João Naves de Ávila, Santa Mônica, Uberlândia</address>
+</footer>
+
+<script>
+    // Seleciona todas as imagens dentro da galeria
+    const imagens = document.querySelectorAll(".galeria img");
+
+    // Percorre cada imagem
+    imagens.forEach(function(img) {
+
+        // Quando o mouse entrar na imagem
+        img.addEventListener("mouseenter", function() {
+            img.style.boxShadow = "0 0 15px red";
+        });
+
+        // Quando o mouse sair da imagem
+        img.addEventListener("mouseleave", function() {
+            img.style.boxShadow = "0 0 5px black";
+        });
+
+    });
+</script>
+
+</body>
+</html>

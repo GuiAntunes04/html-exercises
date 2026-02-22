@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Currículo de João Júnior</title>
+        <link rel="stylesheet" href="ex5.css">
+    </head>
+    <body>
+        <main>
+            <section>
+
+            <img src = "images/perfil.jpg"
+            width ="120" 
+            height="120">
+
+            <h1>João Júnior Jorge José</h1>
+            
+            </section>
+
+            <section>
+        
+            <h2>Perfil</h2>
+            <p>Engenheiro de Computação formado pelo Instituto Tecnológico de Aeronáutica (ITA), com mais de 8 anos de 
+                experiência na concepção, arquitetura e implementação de sistemas de software de missão crítica e alta 
+                escalabilidade.</p>
+
+            <p>Profundo conhecimento teórico e prático em Algoritmos Avançados, Estrutura de Dados e Complexidade 
+                Computacional, permitindo a tomada de decisões de arquitetura focadas em desempenho otimizado e 
+                eficiência de custo. Atuo como mentor e líder técnico, orientando equipes na adoção de melhores práticas 
+                de Engenharia de Software e garantindo a excelência do código.</p>
+
+            </section>
+
+            <section>
+
+            <h2>Principais Competências</h2>
+
+            <ul>
+                <li>Arquitetura de Sistemas Distribuídos</li>
+                <li>Análise de Algoritmos e Complexidade</li>
+                <li>Programação de Sistemas de Baixo Nível</li>
+                <li>DevOps e Cloud Computing</li>
+                <li>Projetos Full-Stack</li>
+            </ul>
+
+            </section>
+
+            <section>
+
+            <h2>Formação Acadêmica</h2>
+
+            <p>Graduação em Engenharia de Computação pelo <a href= "http://www.ita.br" target= "_blank">
+                Instituto Tecnológico de Aeronáutica</a> (2015) e Mestrado em Gestão da Informação pela 
+                <a href= "https://ufu.br" target= "_blank">Universidade Federal de Uberlândia</a> (2021)</p>
+            
+            </section>
+
+            <section>
+
+            <h2>Experiência Profissional</h2>
+
+            <ol>
+                <li>Embraer (2020-2021)</li>
+                <li>BTG Pactual (2022-2023)</li>
+                <li>Microsoft (2024-2025)</li>
+            </ol>
+
+            <a href= "exepriencia.html">Veja as experiências profissionais em detalhes</a>
+
+            </section>
+
+            <section>
+            
+            <h2>Contato</h2>
+
+            <address><img src = "images/Locale.png"
+            width ="30" 
+            height="30"> João Naves de Ávila, Santa Mônica, Uberlândia</address>
+
+            <address><img src = "images/Phone.png"
+            width ="30" 
+            height="30"> (34) 9 9999-9999</address>
+
+            <address><img src = "images/Email.png"
+            width ="30" 
+            height="30"> JoaoJunior@mail.com</address>
+
+            </section>
+        </main>
+
+        <script>
+    // Seleciona todos os h2
+    const titulos = document.querySelectorAll("h2");
+
+    titulos.forEach(function(titulo) {
+
+        // Clique simples → esconder conteúdo da section
+        titulo.addEventListener("click", function() {
+
+            // Pega a section onde o h2 está
+            const secao = titulo.parentElement;
+
+            // Percorre todos os filhos da section
+            Array.from(secao.children).forEach(function(elemento) {
+
+                // Não esconde o próprio h2
+                if (elemento !== titulo) {
+                    elemento.classList.add("oculto");
+                }
+
+            });
+
+        });
+
+        // Duplo clique → mostrar conteúdo novamente
+        titulo.addEventListener("dblclick", function() {
+
+            const secao = titulo.parentElement;
+
+            Array.from(secao.children).forEach(function(elemento) {
+
+                if (elemento !== titulo) {
+                    elemento.classList.remove("oculto");
+                }
+
+            });
+
+        });
+
+    });
+        </script>
+    </body>
+</html>
