@@ -1,0 +1,3 @@
+Daniel;fulano@mail.com;23123
+Mane;mane@mail.com;22333
+jose;se@fdsfsd.com;3344433
