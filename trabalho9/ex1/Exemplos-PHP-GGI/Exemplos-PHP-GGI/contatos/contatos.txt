@@ -1,3 +1,7 @@
 Daniel;fulano@mail.com;23123
 Mane;mane@mail.com;22333
 jose;se@fdsfsd.com;3344433
+Guilherme ;xx12es2x@gmail.com;34991919292
+joao;yyyyaaa@gmail.com;34991910000
+<script>alert('Ataq. X S S')</script>;aaaa@abc.com;34999999
+<script>window.location='http://www.ufu.br'</script>;uuuu@uu.com;101101010
